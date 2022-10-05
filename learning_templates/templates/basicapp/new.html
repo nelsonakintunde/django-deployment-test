@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "basicapp/base.html" %}
+  {% block new_block %}
+    <h1>WELCOME TO NEW</h1>
+    <h2>Template ingeritance testing</h2>
+    <a href="{% url 'relative' %}">THE RELATIVE PAGE</a>
+    <p>
+    <a href="{% url 'index' %}">CLICK HERE TO GO TO THE INDEX PAGE</a>
+    </p>
+    <a href="{%  url 'admin:index' %}">CLICK TO GO TO THE ADMIN</a>
+    {% endblock %}

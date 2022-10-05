@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{% extends "basicapp/base.html" %}
+{% block new_block %}
+    <h1>WELCOME TO INDEX</h1>
+    <a href="{% url 'relative' %}">CLICK HERE TO GO TO THE RELATIVE PAGE</a>
+    <p><a href="{% url 'new' %}">CLICK HERE TO GO TO THE NEW PAGE</a></p>
+    <h1>{{ info|cut:'hello' }}</h1>
+    <h2>{{ fig|add:899 }}</h2>
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li class="navbar-brand"><a href="{% url 'new' %}">BRAND</a></li>
+          <li class="navbar-link"><a href="{% url 'admin:index' %}">ADMIN</a></li>
+          <li class="navbar-link"><a href="{% url 'new' %}">NEW</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      {% block new_block %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
